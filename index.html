@@ -13,15 +13,11 @@
   </head>
 
   <body>
-
-<!------------
-header 
---------------->
-
     <header id="header">
       <div class="site_title">
         <a href="#"><img src="img/logo.svg"></a>
       </div>
+
       <nav class="wrapper">
         <ul class="menu">
           <li><a href="#">ALL</a></li>
@@ -38,35 +34,19 @@ header
       </nav>
     </header>
 
-<!------------- 
-main 
---------------->
-
     <main>
       <div id="item" class="wrapper">
-
-<!------------- 
-image 
---------------->
-
         <div class="image">
           <img src="img/item.jpg">
         </div>
-
-<!------------- 
-info 
---------------->
 
         <div class="info">
           <h1 class="item_title">Short Sleeve Shirt</h1>
           <p>
             テキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキスト テキストテキストテキスト
           </p>
-          <p>￥9,999 +tax</p>
 
-<!------------- 
-info > order_table
---------------->
+          <p>￥9,999 +tax</p>
 
           <table class="order_table">
             <thead>
@@ -116,40 +96,34 @@ info > order_table
             </tbody>
           </table>
 
-<!------------- 
-info > cart_btn
---------------->
-
           <div class="cart_btn">
             <a href="#">ADD TO CART</a>
           </div>
 
-<!------------- 
-info > size_table
---------------->
-
           <table class="size_table">
             <thead>
-              <th class="size">size</th>
-              <th class="chest">Chest</th>
-              <th class="weist">Weist</th>
-              <th class="height">Height</th>
+              <tr>
+                <th class="size">size</th>
+                <th class="chest">Chest</th>
+                <th class="weist">Weist</th>
+                <th class="height">Height</th>
+              </tr>
             </thead>
             <tbody>
               <tr>
-                <td>S</td>
+                <th>S</th>
                 <td>99 ~ 99</td>
                 <td>99 ~ 99</td>
                 <td>99 ~ 99</td>
               </tr>
               <tr>
-                <td>M</td>
+                <th>M</th>
                 <td>99 ~ 99</td>
                 <td>99 ~ 99</td>
                 <td>99 ~ 99</td>
               </tr>
               <tr>
-                <td>L</td>
+                <th>L</th>
                 <td>99 ~ 99</td>
                 <td>99 ~ 99</td>
                 <td>99 ~ 99</td>
@@ -159,10 +133,6 @@ info > size_table
         </div><!-- info -->
       </div><!-- item -->
     </main>
-    
-<!------------- 
-footer
---------------->
     
     <footer id="footer">
       <p class="copyright">© TOTALLY</p>

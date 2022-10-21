@@ -8,9 +8,14 @@ html {
 }
 
 body {
-  font-size: .75rem;
   color: #2b2a27;
+  font-size: .75rem;
   font-family: "Raleway", sans-serif;
+}
+
+a {
+  color: #2b2a27;
+  text-decoration: none;
 }
 
 img {
@@ -21,55 +26,53 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: #2b2a27;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 th {
   font-weight: normal;
 }
 
+.site_title {
+  width: 110px;  
+  line-height: 1px;
+  margin: 0 auto 36px;
+}
+
+.site_title a {
+  display: block;
+}
+
 .wrapper {
   max-width: 800px;
   margin: 0 auto;
 }
+
 /*-------------------------------------------
 header
 -------------------------------------------*/
 #header {
   max-width: 1000px;
-  border-bottom: 1px solid #ccc;
   padding: 46px 60px 26px;
   margin: 0 auto 50px;
-}
-
-#header .site_title {
-  width: 110px;  
-  margin: 0 auto 30px;
-}
-
-#header .site_title a {
-  display: block;
+  border-bottom: 1px solid #ccc;
 }
 
 #header nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
-
-#header .menu {
+#header nav .menu,
+#header .login {
   display: flex;
 }
 
 #header .menu li {
   margin-right: 14px;
-}
-
-
-#header .login {
-  display: flex;
 }
 
 #header .login li {
@@ -83,12 +86,10 @@ item
   justify-content: space-between;
   margin-bottom: 100px;
 }
-/*-------------------------------------------
-image
--------------------------------------------*/
+
 #item .image {
-  width: 50%;
   max-width: 400px;
+  flex-shrink: 0;
   height: 500px;
 }
 
@@ -101,25 +102,22 @@ image
 info
 -------------------------------------------*/
 #item .info {
-  width: 50%;
   padding-left: 60px;
 }
 
 #item .info .item_title {
-  font-size: 1rem;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 20px 0;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 
 #item .info p {
-  line-height: 1.9;
   margin-bottom: 30px;
+  line-height: 1.9;
 }
-/*-------------------------------------------
-info > order_table
--------------------------------------------*/
+
 #item .info .order_table {
   width: 100%;
   text-align: center;
@@ -162,9 +160,7 @@ info > order_table
   -moz-appearance: menulist;
   -webkit-appearance: menulist;
 }
-/*-------------------------------------------
-info > cart_btn
--------------------------------------------*/
+
 #item .info .cart_btn {
   width: 100%;
   text-align: center;
@@ -173,18 +169,15 @@ info > cart_btn
 
 #item .info .cart_btn a {
   display: block;
+  line-height: 1;
   background-color: #4B4B4B;
   color: #fff;
-  padding: 20px 0;
+  padding: 18px 0;
 }
-/*-------------------------------------------
-info > size_table
--------------------------------------------*/
+
 #item .info .size_table {
   width: 100%;
   text-align: center;
-  border-collapse: collapse;
-
 }
 
 /* テーブルの列ごとの幅を指定 */
@@ -206,7 +199,7 @@ info > size_table
 #item .info .size_table th,
 #item .info .size_table td {
   border: 1px solid #ccc;
-  padding: 10px 20px;
+  padding: 10px;
 }
 /*-------------------------------------------
 footer
@@ -227,17 +220,19 @@ SP
 @media screen and (max-width: 896px) {
 
   /*-------------------------------------------
+  common
+  -------------------------------------------*/
+  .site_title {
+    margin-bottom: 26px;
+  }
+
+  /*-------------------------------------------
   header
   -------------------------------------------*/
   #header {
-    max-width: none;
     border-bottom: none;
     padding: 36px 16px 16px;
     margin: 0;
-  }
-  
-  #header .site_title {
-    margin: 0 auto 26px;
   }
   
   #header nav {
@@ -248,21 +243,19 @@ SP
   -------------------------------------------*/
   #item {
     flex-direction: column;
-    margin-bottom: 100px;
   }
   /*-------------------------------------------
   image
   -------------------------------------------*/
   #item .image {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-    max-width: none;
+    margin-bottom: 10px;
   }
   /*-------------------------------------------
   info
   -------------------------------------------*/
   #item .info {
-    width: 100%;
     padding: 0 16px;
   }
 }
