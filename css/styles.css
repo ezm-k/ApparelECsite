@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/*-------------------------------------------
+common
+-------------------------------------------*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: .75rem;
+  color: #2b2a27;
+  font-family: "Raleway", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2b2a27;
+}
+
+th {
+  font-weight: normal;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+  max-width: 1000px;
+  border-bottom: 1px solid #ccc;
+  padding: 46px 60px 26px;
+  margin: 0 auto 50px;
+}
+
+#header .site_title {
+  width: 110px;  
+  margin: 0 auto 30px;
+}
+
+#header .site_title a {
+  display: block;
+}
+
+#header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#header .menu {
+  display: flex;
+}
+
+#header .menu li {
+  margin-right: 14px;
+}
+
+
+#header .login {
+  display: flex;
+}
+
+#header .login li {
+  margin-left: 14px;
+}
+/*-------------------------------------------
+item
+-------------------------------------------*/
+#item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+/*-------------------------------------------
+image
+-------------------------------------------*/
+#item .image {
+  width: 50%;
+  max-width: 400px;
+  height: 500px;
+}
+
+#item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*-------------------------------------------
+info
+-------------------------------------------*/
+#item .info {
+  width: 50%;
+  padding-left: 60px;
+}
+
+#item .info .item_title {
+  font-size: 1rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+#item .info p {
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+/*-------------------------------------------
+info > order_table
+-------------------------------------------*/
+#item .info .order_table {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* テーブルの列ごとの幅を指定 */
+#item .info .order_table .color, 
+#item .info .order_table .size{
+  width: 20%;
+}
+
+#item .info .order_table .space {
+  width: 60%;
+}
+
+#item .info .order_table th,
+#item .info .order_table td {
+  /* 1.縦の線を表示 */
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+#item .info .order_table td {
+  /* 2.横の線を表示 */
+  border-top: 1px solid #ccc;
+}
+
+#item .info .order_table th:last-child,
+#item .info .order_table td:last-child {
+  /* 3.右端の縦線を消去 */
+  border-right: none;
+}
+
+#item .info .order_table select {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  /* セレクトボックス右端の矢印表示 */
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+}
+/*-------------------------------------------
+info > cart_btn
+-------------------------------------------*/
+#item .info .cart_btn {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#item .info .cart_btn a {
+  display: block;
+  background-color: #4B4B4B;
+  color: #fff;
+  padding: 20px 0;
+}
+/*-------------------------------------------
+info > size_table
+-------------------------------------------*/
+#item .info .size_table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+
+}
+
+/* テーブルの列ごとの幅を指定 */
+#item .info .size_table .size {
+  width: 16%;
+}
+
+#item .info .size_table .chest, 
+#item .info .size_table .weist, 
+#item .info .size_table .height {
+  width: 28%;
+}
+
+#item .info .size_table th,
+#item .info .size_table td:first-child {
+  background-color: #ecebeb;
+}
+
+#item .info .size_table th,
+#item .info .size_table td {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+}
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  width: 100%;
+  text-align: center;;
+  padding: 10px 0;
+}
+
+#footer .copyright {
+  font-size: .5rem;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 896px) {
+
+  /*-------------------------------------------
+  header
+  -------------------------------------------*/
+  #header {
+    max-width: none;
+    border-bottom: none;
+    padding: 36px 16px 16px;
+    margin: 0;
+  }
+  
+  #header .site_title {
+    margin: 0 auto 26px;
+  }
+  
+  #header nav {
+    overflow-x: scroll;
+  }
+  /*-------------------------------------------
+  item
+  -------------------------------------------*/
+  #item {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  /*-------------------------------------------
+  image
+  -------------------------------------------*/
+  #item .image {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+  }
+  /*-------------------------------------------
+  info
+  -------------------------------------------*/
+  #item .info {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
